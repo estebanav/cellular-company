@@ -1,12 +1,15 @@
 var GeolocationControllerApp = Spine.Controller.sub({
 
-  mapCentre : { lat: 39.8106460, lon: -98.5569760 }, // These are the coordinates of United States of America's centre location
-
+  //settings: {
+    mapCentre : { lat: 39.8106460, lon: -98.5569760 }, // These are the coordinates of United States of America's centre location  
+  //},
+  
   elements: {
     "div#coverage-map" : "coverageMap" 
       },
 
-  init: function(){
+  init: function( ){
+    //this.settings = $.extend( this.settings, options );
     console.log('GeolocationController :: init');
     var that = this;
     require( ['js/google-maps/jquery.ui.map.js', 'js/google-maps/jquery.ui.map.overlays.js'] , function(){
@@ -20,14 +23,17 @@ var GeolocationControllerApp = Spine.Controller.sub({
     var options = { 
           center            : that.mapCentre.lat + ',' + that.mapCentre.lon, 
           zoom              : 3, 
-          disableDefaultUI  : false, 
-          callback: this.heatMapMockup
+          disableDefaultUI  : false/*, 
+          callback: this.heatMapMockup*/
           };
-    this.coverageMap.gmap( options );
+    var $coverageMap = this.coverageMap;
+    $coverageMap.gmap( options ).bind('init', function() {  
+      that.heatMapMockup($coverageMap);
+    });
   },
 
-  heatMapMockup : function(){
-    var heatmapzxData = [
+  heatMapMockup : function( $coverageMap ){
+    var heatMapData = [
       new google.maps.LatLng(37.782, -122.447),
       new google.maps.LatLng(37.782, -122.445),
       new google.maps.LatLng(37.782, -122.443),
@@ -43,7 +49,8 @@ var GeolocationControllerApp = Spine.Controller.sub({
       new google.maps.LatLng(37.785, -122.437),
       new google.maps.LatLng(37.785, -122.435)
     ];
-    //$('div#coverage-map').gmap( 'loadHeatMap' ,  {data: heatmapzxData} );
+    
+    $coverageMap.gmap( 'loadHeatMap' ,  {data: heatMapData } );    
   }
 
 });

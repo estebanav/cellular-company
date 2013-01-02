@@ -40,7 +40,7 @@
 		 */
 		loadKML: function(uid, url, kmlLayerOptions) {
 			this.get('overlays > ' + uid, new google.maps.KmlLayer(url, jQuery.extend({'map': this.get('map')}, kmlLayerOptions)));
-		}
+		},
 
 		/**
 		 * Adds heatMap layer and data to the map.
@@ -56,14 +56,13 @@
 		 */
 		loadHeatMap: function( heatmapLayerOptions ) {
 			if( heatmapLayerOptions.data != "undefined" ){
-				var heatMap = new google.maps.visualization.HeatmapLayer({
-		  																	data: heatmapData
-				});
+
+				var heatMap = new google.maps.visualization.HeatmapLayer( heatmapLayerOptions );				                 
 				//heatMap.setMap( this.get('map'));
 				this.get('overlays > heatMap', []).push(heatMap);
 				return $(heatMap);
 			}
-		},
+		}
 	
 	});
 	
