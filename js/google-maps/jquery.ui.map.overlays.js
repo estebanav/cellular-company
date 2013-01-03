@@ -58,9 +58,9 @@
 			if( heatmapLayerOptions.data != "undefined" ){
 
 				var heatMap = new google.maps.visualization.HeatmapLayer( heatmapLayerOptions );				                 
-				//heatMap.setMap( this.get('map'));
-				this.get('overlays > heatMap', []).push(heatMap);
-				return $(heatMap);
+				heatMap.setMap( this.get('map'));
+				//this.get('overlays > heatMap', heatMap );
+				//return $(heatMap);
 			}
 		}
 	
