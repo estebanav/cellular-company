@@ -19,3 +19,12 @@ left: 0;
 background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
 opacity: .4;
 }
+
+.gmap label {
+	width: auto; 
+	display:inline;
+}
+
+.gmap img {
+	max-width: none;
+}
