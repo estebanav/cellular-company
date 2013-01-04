@@ -23,8 +23,8 @@ myMin.common = {
   src: [
    'src/js/lib/bootstrap.js',
     'src/js/lib/underscore-min.js',
-    'src/js/knockout-2.2.0.js',
-    'src/js/require.min.js',
+    'src/js/lib/knockout-2.2.0.js',
+    'src/js/lib/require.min.js',
     'src/js/lib/spinejs/spine.js',
     'src/js/lib/spinejs/manager.js'
 
