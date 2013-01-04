@@ -1,5 +1,5 @@
+/*global $:false, jQuery:true, Spine:true, google:true */
 var GeolocationControllerApp = Spine.Controller.sub({
-
   //settings: {
     mapCentre : { lat: 39.8106460, lon: -98.5569760 }, // These are the coordinates of United States of America's centre location  
   //},
@@ -7,7 +7,6 @@ var GeolocationControllerApp = Spine.Controller.sub({
   elements: {
     "div#coverage-map" : "coverageMap" 
       },
-
   init: function( ){
     //this.settings = $.extend( this.settings, options );
     console.log('GeolocationController :: init');
@@ -16,7 +15,6 @@ var GeolocationControllerApp = Spine.Controller.sub({
       that.bindings();
     });
   },
-
   bindings: function(){
     console.log('GeolocationController :: bindigs');
     var that = this;

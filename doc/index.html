@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Doc</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../build/css/app.css">
+        <script src="../build/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+<body>
+	 <div class="container">
+        
+        <div class="row">
+            <h2>GruntJS Setup</h2>
+        <div class="span6">
+            <h3>1) Installing Node</h3>
+            <ul>
+            <li>Go to <a href="http://nodejs.org/">http://nodejs.org/</a></li>
+            <li>Download &amp; Run the Node installer</li>
+            <li>Open Terminal Window (Unix/Mac) / Run cmd (Windows) </li>
+
+            </ul>
+            <p>Test Install</p>
+            <pre><code>$ <strong>node --version</strong>
+v0.8.7</code></pre>
+            <div class="alert alert-info">
+            <strong>Windows Users</strong> If test fails check your system path variable.
+            </div>
+        </div> 
+        <div class="span6">
+            <h3>2) Installing Grunt</h3>
+            <p>Open Terminal Window (Unix/Mac) / Run cmd (Windows)</p>
+            <pre><code>npm install -g grunt</code></pre>
+            <p>Test Install</p>
+            <pre><code>$ <strong>grunt -version</strong>
+path.existsSync is now called `fs.existsSync`.
+grunt v0.3.12
+</code></pre>
+        </span>
+        	
+</div>
+        	
+</div>
+<div class="row">
+    <div class="span6">
+        <h3>3) Installing Dependencies</h3>
+        <p>GruntJs comes with some buil-in modules but Less is not by default, for this task we are going to use <code>grunt-recess</code> </p>
+        <p>Open Terminal Window and <strong>go to your project folder</strong></p>
+        <pre><code>$ <strong>sudo npm install grunt-recess</strong>
+...
+grunt-recess@0.1.4 node_modules/grunt-recess
+└── recess@1.1.6 (colors@0.6.0-1, watch@0.5.1, underscore@1.4.3, less@1.3.3, nopt@2.0.0)
+</code></pre>
+<div class="alert alert-info">
+            <strong>grunt-recess</strong>: Grunt task to lint and minify CSS and LESS, using the Twitter RECESS module.
+            More info: <a href="https://github.com/sindresorhus/grunt-recess">https://github.com/sindresorhus/grunt-recess</a>
+            </div>
+    </div>
+    <div class="span6"><h3>4) Running Grunt</h3>
+        <p>Open Terminal Window and <strong>go to your project folder</strong></p>
+        
+    
+    <pre><code>$ grunt watch</code></pre>
+
+    </div>
+</div>
+
+
+        </div>
+       
+       <script src="js/vendor/jquery-1.8.3.min.js" type="text/javascript"></script>
+       <script src="js/bootstrap.js" type="text/javascript"></script>
+        
+</body>
+</html>

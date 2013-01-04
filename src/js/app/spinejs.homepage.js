@@ -1,3 +1,4 @@
+/*global $:false, jQuery:true, Spine:true, google:true */
 var HomepageControllerApp = Spine.Controller.sub({
 
   settings: {
